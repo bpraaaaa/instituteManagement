@@ -1,0 +1,19 @@
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full screen height */
+}
+
+.body {
+  display: flex;
+  flex: 1; /* Fills all vertical space between navbar and footer */
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f0f2f5;
+}
