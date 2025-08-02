@@ -1,0 +1,44 @@
+.container1 {
+  padding: 20px;
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  border-radius: 8px;
+  color: #614700; 
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tile {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #001529;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  color: #0a66c2;
+}

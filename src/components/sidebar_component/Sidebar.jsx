@@ -1,27 +1,30 @@
 import React from 'react';
 import styles from './Sidebar.module.css';
 
+import { Link } from 'react-router-dom';
+
 const Sidebar = ({ role }) => {
   const commonLinks = [
-    { label: 'Dashboard', href: '#' },
-    { label: 'Profile', href: '#' },
+    { label: 'Dashboard', href: 'dash' },
+    { label: 'Profile', href: 'profile' },
   ];
 
   const roleLinks = {
     student: [
-      { label: 'My Courses', href: '#' },
-      { label: 'Assignments', href: '#' },
-      { label: 'Grades', href: '#' },
+      { label: 'My Attendance', href: 'attendance' },
+      { label: 'My Projects', href: 'projects' },
+      { label: 'My Grades', href: 'grades' },
     ],
     teacher: [
-      { label: 'Manage Classes', href: '#' },
-      { label: 'Upload Material', href: '#' },
-      { label: 'Student Reports', href: '#' },
+      { label: 'Projects', href: 'projects' },
+      { label: 'Manage Classes', href: 'classes' },
+      { label: 'Student Management', href: 'students' },
     ],
     admin: [
-      { label: 'User Management', href: '#' },
-      { label: 'System Logs', href: '#' },
-      { label: 'Settings', href: '#' },
+      { label: 'Teacher Management', href: 'teachers' },
+      { label: 'Projects', href: 'projects' },
+      { label: 'Manage Classes', href: 'classes' },
+      { label: 'Student Management', href: 'students' },
     ],
   };
 
@@ -29,12 +32,25 @@ const Sidebar = ({ role }) => {
     <aside className={styles.sidebar}>
       <ul>
         {commonLinks.map((link, index) => (
-          <li key={index}><a href={link.href}>{link.label}</a></li>
+          // <li key={index}>
+          //   <a href={link.href}>{link.label}</a>
+          // </li>
+
+          <li key={index}>
+             <Link to={link.href}>{link.label}</Link>
+          </li>
         ))}
         <hr />
         {roleLinks[role]?.map((link, index) => (
-          <li key={index}><a href={link.href}>{link.label}</a></li>
+          // <li key={index}><a href={link.href}>{link.label}</a></li>
+          
+          <li key={index}>
+             <Link to={link.href}>{link.label}</Link>
+          </li>
+          
         ))}
+        <hr />
+          <li><a href='/'>Log Out</a></li>
 
       </ul>
     </aside>

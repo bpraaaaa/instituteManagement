@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Navbar.module.css';
 import logo from '../../assets/logo.jpeg';
 
-const Navbar = ({ username = "User" }) => {
+const Navbar = ({ username='User3' }) => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.left}>

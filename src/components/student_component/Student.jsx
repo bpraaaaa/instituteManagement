@@ -1,15 +1,60 @@
-import React from 'react';
-import styles from './Student.module.css';
-import Layout from '../layout_component/Layout';
+import React from "react";
+import styles from "./Student.module.css";
 
-const Student = ({ name = "Student" }) => {
+import { Outlet } from 'react-router-dom';
+import { useUser } from '../UserContext';
+
+import Navbar from '../navbar_component/Navbar';
+import Sidebar from '../sidebar_component/Sidebar';
+import Footer from '../footer_component/Footer';
+
+const Student = ({ username= "User1" }) => {
+
+  const { userData } = useUser();
+
   return (
-    <Layout username={name} role="student">
-      <div className={styles.container}>
-        <h2>Welcome, {name}</h2>
-        <p>This is your student dashboard. Here you can view courses, assignments, and grades.</p>
+
+    <div className={styles.page}>
+      <Navbar username={userData.name} />
+
+      <div className={styles.body}>
+        <Sidebar role='student' />
+
+        <main className={styles.content}>
+         <Outlet /> 
+        </main>
+
       </div>
+
+      <Footer />
+    </div>
+
+    /*
+    <Layout username={username} role="student">
+      <>
+        <div className={styles.container}>
+
+          <div className={styles.container1}>
+            <h2 className={styles.heading}>Welcome, {username}</h2>
+            <p>
+              This is your student dashboard. Here you can view courses, assignments, and grades.
+            </p>
+          </div>
+
+          <br />
+
+          <div className={styles.tileGrid}>
+            {tiles.map((tile, index) => (
+              <a href={tile.href} key={index} className={styles.tile}>
+                <div className={styles.icon}>{tile.icon}</div>
+                <span>{tile.title}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </>
     </Layout>
+    */
   );
 };
 

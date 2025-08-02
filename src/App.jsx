@@ -1,30 +1,63 @@
 import './App.css'
 
-import Navbar from './components/navbar_component/Navbar'
-import Footer from './components/footer_component/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './components/login_components/Login'
 
-import Student from './components/student_component/Student'
-import Teacher from './components/teacher_component/Teacher'
-import Admin from './components/admin_component/Admin'
+import Admin from './components/admin_component/Admin';
+import AdminDash from './components/tiles_component/dashboard_component/admin_dash/AdminDash';
+import Profile from './components/tiles_component/profile/Profile';
+import TeacherManager from './components/tiles_component/teacher_manager/TeacherManager';
+import ProjectManager from './components/tiles_component/project_manager/ProjectManager';
+import ClassManager from './components/tiles_component/class_manager/ClassManager';
+import StudentManager from './components/tiles_component/student_manager/StudentManager';
+
+import Teacher from './components/teacher_component/Teacher';
+import TeacherDash from './components/tiles_component/dashboard_component/teacher_dash/TeacherDash';
+
+import Student from './components/student_component/Student';
+import StudentDash from './components/tiles_component/dashboard_component/student_dash/StudentDash';
+import AttendanceManager from './components/tiles_component/attendance_manager/AttendaceManager';
+import GradeManager from './components/tiles_component/grade_manager/GradeManager';
+
 
 function App() {
-  
-  const role = "admin"; // "student" or 'teacher' or 'admin'
 
   return (
     <>
-    <Login/>
+      <Router>
+        <Routes>
 
-    <hr /><hr /><br /><br />
+          <Route path="/" element={<Login />} />
 
+          <Route path="/admin" element={<Admin />}>
+            <Route index path='dash' element={<AdminDash />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="teachers" element={<TeacherManager />} />
+            <Route path="projects" element={<ProjectManager />} />
+            <Route path="classes" element={<ClassManager />} />
+            <Route path="students" element={<StudentManager />} />
+          </Route>
 
-      {role === 'student' && <Student name="Alice" />}
-      {role === 'teacher' && <Teacher name="Mr. Sharma" />}
-      {role === 'admin' && <Admin name="Admin John" />}
+          <Route path="/teacher" element={<Teacher />}>
+            <Route index path='dash' element={<TeacherDash />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="projects" element={<ProjectManager />} />
+            <Route path="classes" element={<ClassManager />} />
+            <Route path="students" element={<StudentManager />} />
+          </Route>
 
-      
+          <Route path="/student" element={<Student />}>
+            <Route index path='dash' element={<StudentDash />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="attendance" element={<AttendanceManager />} />
+            <Route path="projects" element={<ProjectManager />} />
+            <Route path="grades" element={<GradeManager />} />
+          </Route>
+
+        </Routes>
+      </Router>
+
     </>
   )
 }

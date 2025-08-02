@@ -2,12 +2,12 @@
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full screen height */
+  height: 100vh; 
 }
 
 .body {
   display: flex;
-  flex: 1; /* Fills all vertical space between navbar and footer */
+  flex: 1; 
   overflow: hidden;
 }
 
@@ -17,3 +17,6 @@
   overflow-y: auto;
   background-color: #f0f2f5;
 }
+
+
+
