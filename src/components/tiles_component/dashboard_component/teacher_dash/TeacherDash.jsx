@@ -1,19 +1,22 @@
 import React from 'react'
+
 import styles from './TeacherDash.module.css';
 
 import { useUser } from '../../../UserContext'; 
 
-import { MdSchool, MdClass, MdAssignment } from 'react-icons/md';
+import { MdSchool, MdClass, MdAccessTime, MdAssignment } from 'react-icons/md';
 
 const tiles = [
   { title: 'Projects', href: 'projects', icon: <MdAssignment size={32} /> },
   { title: 'Manage Classes', href: 'classes', icon: <MdClass size={32} /> },
+  { title: 'Manage Attendance', href: 'attend', icon: <MdAccessTime size={32} /> },
   { title: 'Student Management', href: 'students', icon: <MdSchool size={32} /> },
 ];
 
 export default function TeacherDash() {
 
   const { userData } = useUser();
+  console.log("on teacher dash", userData)
 
   return (
     <>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './Sidebar.module.css';
 
 import { Link } from 'react-router-dom';
@@ -18,12 +19,14 @@ const Sidebar = ({ role }) => {
     teacher: [
       { label: 'Projects', href: 'projects' },
       { label: 'Manage Classes', href: 'classes' },
+      { label: 'Manage Attendance', href: 'attend' },
       { label: 'Student Management', href: 'students' },
     ],
     admin: [
       { label: 'Teacher Management', href: 'teachers' },
       { label: 'Projects', href: 'projects' },
       { label: 'Manage Classes', href: 'classes' },
+      { label: 'Manage Attendance', href: 'attend' },
       { label: 'Student Management', href: 'students' },
     ],
   };
@@ -41,9 +44,7 @@ const Sidebar = ({ role }) => {
           </li>
         ))}
         <hr />
-        {roleLinks[role]?.map((link, index) => (
-          // <li key={index}><a href={link.href}>{link.label}</a></li>
-          
+        {roleLinks[role]?.map((link, index) => (          
           <li key={index}>
              <Link to={link.href}>{link.label}</Link>
           </li>

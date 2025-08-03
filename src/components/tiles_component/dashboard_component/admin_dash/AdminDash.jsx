@@ -1,20 +1,23 @@
 import React from 'react'
+
 import styles from './AdminDash.module.css';
 
 import { useUser } from '../../../UserContext'; 
 
-import { MdPerson, MdSchool, MdClass, MdAssignment } from 'react-icons/md';
+import { MdPerson, MdSchool, MdClass, MdAccessTime, MdAssignment } from 'react-icons/md';
 
 const tiles = [
   { title: 'Teacher Management', href: 'teachers', icon: <MdPerson size={32} /> },
   { title: 'Projects', href: 'projects', icon: <MdAssignment size={32} /> },
   { title: 'Manage Classes', href: 'classes', icon: <MdClass size={32} /> },
+  { title: 'Manage Attendance', href: 'attend', icon: <MdAccessTime size={32} /> },
   { title: 'Student Management', href: 'students', icon: <MdSchool size={32} /> },
 ];
 
 export default function AdminDash() {
 
   const { userData } = useUser();
+  console.log("on admin dash", userData)
 
   return (
     <>
@@ -33,6 +36,9 @@ export default function AdminDash() {
               </a>
             ))}
           </div>
+
           </>
   )
 }
+
+

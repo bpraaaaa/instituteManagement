@@ -1,74 +1,80 @@
 .container {
-  background-color: #f9f9ff;
   padding: 24px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  max-width: 800px;
-  margin: 0 auto;
+  background-color: #f4faff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .heading {
-  font-size: 24px;
-  color: #334;
+  font-size: 26px;
+  font-weight: 600;
+  color: #0077cc;
   margin-bottom: 8px;
 }
 
 .description {
+  font-size: 15px;
   color: #555;
   margin-bottom: 20px;
 }
 
 .form {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 12px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .form input {
   padding: 10px;
-  width: 200px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
+  border: 1px solid #b3d1f7;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 180px;
+  font-size: 14px;
+  background-color: #fff;
 }
 
 .form button {
-  background-color: #0066cc;
+  padding: 10px 18px;
+  background-color: #0077cc;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .form button:hover {
-  background-color: #3385ff;
+  background-color: #005fa3;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: #eef3ff;
-  border: 1px solid #ccd;
-  margin-bottom: 10px;
-  border-radius: 4px;
-}
-
-.list button {
-  background-color: #e60000;
+.table th {
+  background-color: #0077cc;
   color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
 }
 
-.list button:hover {
-  background-color: #ff1a1a;
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #333;
+}
+
+.table tr:hover {
+  background-color: #f0f8ff;
 }

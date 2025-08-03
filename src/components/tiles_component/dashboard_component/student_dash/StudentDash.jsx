@@ -1,4 +1,5 @@
 import React from 'react'
+
 import styles from './StudentDash.module.css';
 
 import { useUser } from '../../../UserContext'; 
@@ -11,9 +12,10 @@ const tiles = [
   { title: "My Grades", href: "grades", icon: <MdScore size={32} /> },
 ];
 
-export default function StudentDash({username}) {
+export default function StudentDash() {
 
   const { userData } = useUser();
+  console.log("on student dash", userData)
 
   return (
     <>

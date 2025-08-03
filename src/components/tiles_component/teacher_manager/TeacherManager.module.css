@@ -1,25 +1,37 @@
 .teacherManager {
-  padding: 1rem;
-  background-color: white;
+  padding: 24px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
   border-radius: 8px;
 }
 
 .form {
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .form input {
-  padding: 8px;
-  margin-right: 10px;
-  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px;
 }
 
 .form button {
-  padding: 8px 12px;
-  background-color: #1890ff;
+  padding: 10px 16px;
+  background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
 }
 
 .table {
@@ -29,8 +41,9 @@
 
 .table th,
 .table td {
-  padding: 12px;
   border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
 }
 
 .table th {
@@ -38,9 +51,14 @@
 }
 
 .table button {
-  padding: 4px 8px;
-  background-color: red;
+  padding: 6px 10px;
+  background-color: #dc3545;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.table button:hover {
+  background-color: #c82333;
 }

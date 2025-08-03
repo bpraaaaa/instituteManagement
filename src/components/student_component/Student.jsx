@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "./Student.module.css";
 
 import { Outlet } from 'react-router-dom';
@@ -11,11 +12,12 @@ import Footer from '../footer_component/Footer';
 const Student = ({ username= "User1" }) => {
 
   const { userData } = useUser();
+  console.log("on student page", userData)
 
   return (
 
     <div className={styles.page}>
-      <Navbar username={userData.name} />
+      <Navbar />
 
       <div className={styles.body}>
         <Sidebar role='student' />
@@ -28,33 +30,6 @@ const Student = ({ username= "User1" }) => {
 
       <Footer />
     </div>
-
-    /*
-    <Layout username={username} role="student">
-      <>
-        <div className={styles.container}>
-
-          <div className={styles.container1}>
-            <h2 className={styles.heading}>Welcome, {username}</h2>
-            <p>
-              This is your student dashboard. Here you can view courses, assignments, and grades.
-            </p>
-          </div>
-
-          <br />
-
-          <div className={styles.tileGrid}>
-            {tiles.map((tile, index) => (
-              <a href={tile.href} key={index} className={styles.tile}>
-                <div className={styles.icon}>{tile.icon}</div>
-                <span>{tile.title}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </>
-    </Layout>
-    */
   );
 };
 

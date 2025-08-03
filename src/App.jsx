@@ -1,4 +1,4 @@
-import './App.css'
+// import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import AdminDash from './components/tiles_component/dashboard_component/admin_da
 import Profile from './components/tiles_component/profile/Profile';
 import TeacherManager from './components/tiles_component/teacher_manager/TeacherManager';
 import ProjectManager from './components/tiles_component/project_manager/ProjectManager';
-import ClassManager from './components/tiles_component/class_manager/ClassManager';
+import AttendanceManager from './components/tiles_component/attendance_manager/AttendaceManager';
 import StudentManager from './components/tiles_component/student_manager/StudentManager';
 
 import Teacher from './components/teacher_component/Teacher';
@@ -17,9 +17,9 @@ import TeacherDash from './components/tiles_component/dashboard_component/teache
 
 import Student from './components/student_component/Student';
 import StudentDash from './components/tiles_component/dashboard_component/student_dash/StudentDash';
-import AttendanceManager from './components/tiles_component/attendance_manager/AttendaceManager';
 import GradeManager from './components/tiles_component/grade_manager/GradeManager';
 
+import ClassManager from './components/tiles_component/class_manager/ClassManager';
 
 function App() {
 
@@ -36,6 +36,7 @@ function App() {
             <Route path="teachers" element={<TeacherManager />} />
             <Route path="projects" element={<ProjectManager />} />
             <Route path="classes" element={<ClassManager />} />
+            <Route path="attend" element={<AttendanceManager />} />
             <Route path="students" element={<StudentManager />} />
           </Route>
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="projects" element={<ProjectManager />} />
             <Route path="classes" element={<ClassManager />} />
+            <Route path="attend" element={<AttendanceManager />} />
             <Route path="students" element={<StudentManager />} />
           </Route>
 

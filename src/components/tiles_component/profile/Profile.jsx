@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './Profile.module.css';
 
 import { useUser } from '../../UserContext'; 
@@ -6,13 +7,7 @@ import { useUser } from '../../UserContext';
 const Profile = () => {
 
   const { userData } = useUser();
-
-  const user = {
-    name: 'Prasad B',
-    email: 'prasad@example.com',
-    role: 'Admin',
-    joined: '2023-01-15',
-  };
+  console.log("on porfile page", userData)
 
   return (
     <>
@@ -28,9 +23,6 @@ const Profile = () => {
           <p><strong>Project I.D:</strong> {userData.projectId}</p> &&
           <p><strong>Project name:</strong> {userData.projectName}</p>
         }
-        
-
-        {/* <p><strong>Joined:</strong> {new Date(user.joined).toDateString()}</p> */}
       </div>
     </div>
     </>
