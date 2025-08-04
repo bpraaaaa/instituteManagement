@@ -1,28 +1,67 @@
-.container {
-  background-color: #fefefe;
-  padding: 24px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+.altProfileWrapper {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.heading {
-  font-size: 24px;
-  color: #204060;
-  margin-bottom: 20px;
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
+  color: #1e2a38;
 }
 
 .card {
-  padding: 20px;
-  border-radius: 6px;
-  background-color: #f9f9ff;
-  border: 1px solid #ccc;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.card p {
-  font-size: 16px;
-  margin: 8px 0;
+.field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.label {
+  font-weight: 600;
+  color: #444;
+  min-width: 120px;
+}
+
+.icon {
+  color: #1e2a38;
+  font-size: 1.4rem;
+}
+
+.roleBadge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Role colors */
+.admin {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.teacher {
+  background-color: #c337b5;
+  color: white;
+}
+
+.student {
+  background-color: #4caf50;
+  color: white;
 }

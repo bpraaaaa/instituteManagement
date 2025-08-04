@@ -62,3 +62,10 @@
 .table button:hover {
   background-color: #c82333;
 }
+
+.cancelBtn {
+  margin-left: 10px;
+  background-color: #ccc;
+  color: #333;
+}
+

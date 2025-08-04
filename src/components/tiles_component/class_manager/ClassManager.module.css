@@ -1,75 +1,99 @@
 .container {
-  background-color: #fffdf6;
-  padding: 24px;
-  border-radius: 8px;
-  border: 1px solid #e0c097;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .heading {
-  font-size: 24px;
-  color: #7c5e10;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2e3a59;
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .description {
-  font-size: 16px;
-  color: #665c2e;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .form {
   display: flex;
-  gap: 12px;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .form input {
-  padding: 10px;
-  width: 200px;
-  border: 1px solid #d8b06a;
-  border-radius: 4px;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border 0.2s ease;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #1976d2;
+  background-color: #fff;
 }
 
 .form button {
-  background-color: #e9a73f;
-  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
   border: none;
-  padding: 10px 16px;
-  border-radius: 4px;
+  border-radius: 8px;
+  background-color: #1976d2;
+  color: white;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .form button:hover {
-  background-color: #f0b755;
+  background-color: #145ea8;
 }
 
 .list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .list li {
   display: flex;
   justify-content: space-between;
-  padding: 12px;
-  background-color: #fff8e1;
-  border: 1px solid #f1d89a;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.list li strong {
+  color: #333;
 }
 
 .list button {
-  background-color: #c0392b;
-  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
   border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
+  border-radius: 6px;
+  background-color: #e53935;
+  color: white;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .list button:hover {
-  background-color: #e74c3c;
+  background-color: #c62828;
 }

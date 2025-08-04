@@ -1,37 +1,35 @@
 // import './App.css'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Login from './components/login_components/Login'
+import Login from "./components/login_components/Login";
 
-import Admin from './components/admin_component/Admin';
-import AdminDash from './components/tiles_component/dashboard_component/admin_dash/AdminDash';
-import Profile from './components/tiles_component/profile/Profile';
-import TeacherManager from './components/tiles_component/teacher_manager/TeacherManager';
-import ProjectManager from './components/tiles_component/project_manager/ProjectManager';
-import AttendanceManager from './components/tiles_component/attendance_manager/AttendaceManager';
-import StudentManager from './components/tiles_component/student_manager/StudentManager';
+import Admin from "./components/admin_component/Admin";
+import AdminDash from "./components/tiles_component/dashboard_component/admin_dash/AdminDash";
+import Profile from "./components/tiles_component/profile/Profile";
+import TeacherManager from "./components/tiles_component/teacher_manager/TeacherManager";
+import ProjectManager from "./components/tiles_component/project_manager/ProjectManager";
+import AttendanceManager from "./components/tiles_component/attendance_manager/AttendaceManager";
+import StudentManager from "./components/tiles_component/student_manager/StudentManager";
 
-import Teacher from './components/teacher_component/Teacher';
-import TeacherDash from './components/tiles_component/dashboard_component/teacher_dash/TeacherDash';
+import Teacher from "./components/teacher_component/Teacher";
+import TeacherDash from "./components/tiles_component/dashboard_component/teacher_dash/TeacherDash";
 
-import Student from './components/student_component/Student';
-import StudentDash from './components/tiles_component/dashboard_component/student_dash/StudentDash';
-import GradeManager from './components/tiles_component/grade_manager/GradeManager';
+import Student from "./components/student_component/Student";
+import StudentDash from "./components/tiles_component/dashboard_component/student_dash/StudentDash";
+import GradeManager from "./components/tiles_component/grade_manager/GradeManager";
 
-import ClassManager from './components/tiles_component/class_manager/ClassManager';
+import ClassManager from "./components/tiles_component/class_manager/ClassManager";
 
 function App() {
-
   return (
     <>
       <Router>
         <Routes>
-
           <Route path="/" element={<Login />} />
 
           <Route path="/admin" element={<Admin />}>
-            <Route index path='dash' element={<AdminDash />} />
+            <Route index path="dash" element={<AdminDash />} />
             <Route path="profile" element={<Profile />} />
             <Route path="teachers" element={<TeacherManager />} />
             <Route path="projects" element={<ProjectManager />} />
@@ -41,7 +39,7 @@ function App() {
           </Route>
 
           <Route path="/teacher" element={<Teacher />}>
-            <Route index path='dash' element={<TeacherDash />} />
+            <Route index path="dash" element={<TeacherDash />} />
             <Route path="profile" element={<Profile />} />
             <Route path="projects" element={<ProjectManager />} />
             <Route path="classes" element={<ClassManager />} />
@@ -50,18 +48,16 @@ function App() {
           </Route>
 
           <Route path="/student" element={<Student />}>
-            <Route index path='dash' element={<StudentDash />} />
+            <Route index path="dash" element={<StudentDash />} />
             <Route path="profile" element={<Profile />} />
             <Route path="attendance" element={<AttendanceManager />} />
             <Route path="projects" element={<ProjectManager />} />
             <Route path="grades" element={<GradeManager />} />
           </Route>
-
         </Routes>
       </Router>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;

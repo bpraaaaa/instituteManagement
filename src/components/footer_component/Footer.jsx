@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './Footer.module.css';
-
 import logo from '../../assets/logo.jpeg';
 
 const Footer = () => {
@@ -12,17 +11,17 @@ const Footer = () => {
 
           <h4 className={styles.instituteName}>
             <img src={logo} alt="Logo" className={styles.logo} />
-            P.E.S Institute of Technology</h4>
+            PES Institute of Technology</h4>
 
           <p className={styles.address}>
             123 Knowledge Lane, EduCity, India - 000001
           </p>
-          <p>Email: info@pesinstitute.edu.in</p>
-          <p>Phone: +91-123-456-7890</p>
+          <p className={styles.address}>Email: info@pesinstitute.edu.in</p>
+          <p className={styles.address}>Phone: +91-123-456-7890</p>
         </div>
 
         <div className={styles.right}>
-          <p>© {new Date().getFullYear()} P.E.S Institute.</p>
+          <p>© {new Date().getFullYear()} PES Institute.</p>
           <p> All rights reserved.</p>
           <p>Designed by the Web Team</p>
         </div>

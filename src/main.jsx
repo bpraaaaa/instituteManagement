@@ -1,17 +1,17 @@
-import { StrictMode } from 'react'
+import { StrictMode } from "react";
 
-import './index.css'
+import "./index.css";
 
-import { createRoot } from 'react-dom/client'
+import { createRoot } from "react-dom/client";
 
-import App from './App.jsx'
+import App from "./App.jsx";
 
-import { UserProvider } from './components/UserContext.jsx'
+import { UserProvider } from "./components/UserContext.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <UserProvider>
       <App />
     </UserProvider>
-  </StrictMode>,
-)
+  </StrictMode>
+);
