@@ -19,7 +19,7 @@ const tiles = [
     icon: <MdPerson size={32} />,
   },
   { title: "Projects", href: "projects", icon: <MdAssignment size={32} /> },
-  { title: "Manage Classes", href: "classes", icon: <MdClass size={32} /> },
+  // { title: "Manage Classes", href: "classes", icon: <MdClass size={32} /> },
   {
     title: "Manage Attendance",
     href: "attend",

@@ -1,12 +1,11 @@
 .container {
   max-width: 960px;
-  background-color: #fefefe;
+  margin: 0 auto;
   padding: 10px;
+  background-color: #fefefe;
   border-radius: 8px;
   border: 1px solid #ddd;
-  margin: auto;
 }
-
 
 .heading {
   text-align: center;

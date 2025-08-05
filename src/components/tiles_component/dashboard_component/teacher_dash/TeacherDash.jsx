@@ -8,7 +8,7 @@ import { MdSchool, MdClass, MdAccessTime, MdAssignment } from "react-icons/md";
 
 const tiles = [
   { title: "Projects", href: "projects", icon: <MdAssignment size={32} /> },
-  { title: "Manage Classes", href: "classes", icon: <MdClass size={32} /> },
+  // { title: "Manage Classes", href: "classes", icon: <MdClass size={32} /> },
   {
     title: "Manage Attendance",
     href: "attend",

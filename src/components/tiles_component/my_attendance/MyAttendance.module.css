@@ -1,0 +1,66 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e2a38;
+  text-align: center;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 1rem;
+  color: #5f6368;
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Status color indicators */
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+.leave {
+  color: orange;
+  font-weight: bold;
+}

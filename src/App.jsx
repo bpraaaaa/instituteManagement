@@ -17,9 +17,11 @@ import TeacherDash from "./components/tiles_component/dashboard_component/teache
 
 import Student from "./components/student_component/Student";
 import StudentDash from "./components/tiles_component/dashboard_component/student_dash/StudentDash";
-import GradeManager from "./components/tiles_component/grade_manager/GradeManager";
+import MyAttendance from "./components/tiles_component/my_attendance/MyAttendance";
+import MyProject from "./components/tiles_component/my_project/MyProject";
 
-import ClassManager from "./components/tiles_component/class_manager/ClassManager";
+// import ClassManager from "./components/tiles_component/class_manager/ClassManager";
+// import GradeManager from "./components/tiles_component/grade_manager/GradeManager";
 
 function App() {
   return (
@@ -33,7 +35,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="teachers" element={<TeacherManager />} />
             <Route path="projects" element={<ProjectManager />} />
-            <Route path="classes" element={<ClassManager />} />
+            {/* <Route path="classes" element={<ClassManager />} /> */}
             <Route path="attend" element={<AttendanceManager />} />
             <Route path="students" element={<StudentManager />} />
           </Route>
@@ -42,7 +44,7 @@ function App() {
             <Route index path="dash" element={<TeacherDash />} />
             <Route path="profile" element={<Profile />} />
             <Route path="projects" element={<ProjectManager />} />
-            <Route path="classes" element={<ClassManager />} />
+            {/* <Route path="classes" element={<ClassManager />} /> */}
             <Route path="attend" element={<AttendanceManager />} />
             <Route path="students" element={<StudentManager />} />
           </Route>
@@ -50,9 +52,9 @@ function App() {
           <Route path="/student" element={<Student />}>
             <Route index path="dash" element={<StudentDash />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="attendance" element={<AttendanceManager />} />
-            <Route path="projects" element={<ProjectManager />} />
-            <Route path="grades" element={<GradeManager />} />
+            <Route path="myattend" element={<MyAttendance />} />
+            <Route path="myproject" element={<MyProject />} />
+            {/* <Route path="grades" element={<GradeManager />} /> */}
           </Route>
         </Routes>
       </Router>

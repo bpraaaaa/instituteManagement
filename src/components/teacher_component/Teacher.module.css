@@ -7,7 +7,7 @@
 .body {
   display: flex;
   flex: 1;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .content {

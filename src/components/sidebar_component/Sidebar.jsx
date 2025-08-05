@@ -12,20 +12,20 @@ const Sidebar = ({ role }) => {
 
   const roleLinks = {
     student: [
-      { label: "My Attendance", href: "attendance" },
-      { label: "My Projects", href: "projects" },
-      { label: "My Grades", href: "grades" },
+      { label: "My Attendance", href: "myattend" },
+      { label: "My Projects", href: "myproject" },
+      // { label: "My Grades", href: "grades" },
     ],
     teacher: [
       { label: "Projects", href: "projects" },
-      { label: "Manage Classes", href: "classes" },
+      // { label: "Manage Classes", href: "classes" },
       { label: "Manage Attendance", href: "attend" },
       { label: "Student Management", href: "students" },
     ],
     admin: [
       { label: "Teacher Management", href: "teachers" },
       { label: "Projects", href: "projects" },
-      { label: "Manage Classes", href: "classes" },
+      // { label: "Manage Classes", href: "classes" },
       { label: "Manage Attendance", href: "attend" },
       { label: "Student Management", href: "students" },
     ],

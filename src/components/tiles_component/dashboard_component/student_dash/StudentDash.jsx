@@ -9,11 +9,11 @@ import { MdAccessTime, MdAssignment, MdScore } from "react-icons/md";
 const tiles = [
   {
     title: "My Attendance",
-    href: "attendance",
+    href: "myattend",
     icon: <MdAccessTime size={32} />,
   },
-  { title: "My Project", href: "projects", icon: <MdAssignment size={32} /> },
-  { title: "My Grades", href: "grades", icon: <MdScore size={32} /> },
+  { title: "My Project", href: "myproject", icon: <MdAssignment size={32} /> },
+  // { title: "My Grades", href: "grades", icon: <MdScore size={32} /> },
 ];
 
 export default function StudentDash() {
