@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useUser } from "../UserContext";
 
-import Footer from "../footer_component/Footer";
+import Footer from "../footer_component/Footer";   
 
 const Login = () => {
   const navigate = useNavigate(); //function to navigate

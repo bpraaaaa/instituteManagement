@@ -4,6 +4,7 @@ import axios from "axios";
 
 const StudentManager = () => {
   const [students, setStudents] = useState([]); //store students from db
+  const [projects, setProjects] = useState([]); //store projects from db
   const [form, setForm] = useState({
     //store data from form
     name: "",
@@ -21,6 +22,7 @@ const StudentManager = () => {
 
   useEffect(() => {
     fetchStudents();
+    fetchProjects();
   }, []);
 
   const fetchStudents = async () => {
@@ -29,6 +31,15 @@ const StudentManager = () => {
       setStudents(res.data);
     } catch (err) {
       setError("Failed to load students");
+    }
+  };
+
+  const fetchProjects = async () => {
+    try {
+      const res = await axios.get(`http://localhost:8080/api/projects/all`);
+      setProjects(res.data);
+    } catch (err) {
+      setError("Failed to load projects");
     }
   };
 
@@ -158,23 +169,29 @@ const StudentManager = () => {
           value={form.password}
           onChange={handleChange}
         />
-        <input
-          name="projectId"
-          placeholder="Project ID"
-          value={form.projectId}
-          onChange={handleChange}
-        />
-        {editId ? (
-          <>
-            <button onClick={handleUpdate}>Update Student</button>
-            <button onClick={handleCancel} className={styles.cancelBtn}>
-              Cancel
-            </button>
-          </>
-        ) : (
-          <button onClick={handleAdd}>Add Student</button>
-        )}
+        <select name="projectId" value={form.projectId} onChange={handleChange}>
+          <option value="">Select Project</option>
+          {projects.map((project) => (
+            <option key={project.id} value={project.id}>
+              {project.name}
+            </option>
+          ))}
+        </select>
       </div>
+
+      {editId ? (
+        <>
+          <button onClick={handleUpdate}>Update Student</button>
+          <button onClick={handleCancel} className={styles.cancelBtn}>
+            Cancel
+          </button>
+        </>
+      ) : (
+        <button onClick={handleAdd}>Add Student</button>
+      )}
+      <br />
+      <br />
+      <br />
 
       {/* List Students */}
       <table className={styles.table}>
